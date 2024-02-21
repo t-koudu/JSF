@@ -7,13 +7,14 @@ import javax.faces.bean.RequestScoped;
 @ManagedBean(name = "navigationController", eager = true)
 @RequestScoped
 public class NavigationController implements Serializable {
-	
+
 	@ManagedProperty(value = "#{param.pageId}")
-	private String pageId ;
+	private String pageId;
 
 	public String getPageId() {
 		return pageId;
 	}
+
 	public void setPageId(String pageId) {
 		this.pageId = pageId;
 	}
@@ -34,5 +35,13 @@ public class NavigationController implements Serializable {
 		} else {
 			return "home";
 		}
+	}
+
+	public String processPage1() {
+		return "page";
+	}
+
+	public String processPage2() {
+		return "page";
 	}
 }
